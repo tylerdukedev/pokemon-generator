@@ -12,6 +12,7 @@ ask.addEventListener('keyup', function (e) {
 	}
 });
 
+
 function limit() {
 	if (ask.value.length > 3) {
 		let sliced = ask.value.slice(0, 3);
@@ -24,7 +25,9 @@ function preventNonNumericalInput(e) {
 	var charCode = typeof e.which == 'undefined' ? e.keyCode : e.which;
 	var charStr = String.fromCharCode(charCode);
 
-	if (!charStr.match(/^[0-9]+$/)) e.preventDefault();
+	if (!charStr.match("^[0-9,\b][0-9,\b]*$")){
+ 		e.preventDefault();
+	}
 };
 
 function generate() {
