@@ -26,7 +26,7 @@ function preventNonNumericalInput(e) {
 	var charStr = String.fromCharCode(charCode);
 
 	if (!charStr.match("^[0-9,\b][0-9,\b]*$")){
- 		e.preventDefault();
+ 		e.preventDefault(); //regex 
 	}
 };
 
