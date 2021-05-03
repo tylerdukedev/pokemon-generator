@@ -13,7 +13,7 @@ ask.addEventListener('keyup', function (e) {
 });
 
 function limit(){
-	if (ask.value.length > 3){
+	if (ask.value.length >= 3){
 		let sliced = ask.value.slice(0,2);
 		ask.value = sliced;
 	}
