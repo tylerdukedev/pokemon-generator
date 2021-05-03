@@ -11,7 +11,7 @@
     <h1>151 Pokemon!</h1>
 
     <label for="pick">Enter a number 1-151</label>
-    <input type="number" id="input" required maxlength="3" size="3" class="small-input" pattern="[0-9*" value="" oninput="preventNonNumericalInput(event), limit()">
+    <input type="number" id="input" required maxlength="3" size="3" class="small-input" pattern="[0-9*" value="" onkeypress="preventNonNumericalInput(event)" oninput="limit()">
 
     <button id="btn" onclick="generate()">Enter</button>
 
