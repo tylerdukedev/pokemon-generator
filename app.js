@@ -1,10 +1,11 @@
 let con = document.querySelector('#container');
 let ask = document.querySelector('#input');
 
+
+//function calls
 window.onload = () => {
 	ask.onpaste = (e) => e.preventDefault();
 };
-
 ask.addEventListener('keyup', function (e) {
 	e.preventDefault();
 	if (e.key === 'Enter') {
@@ -12,7 +13,7 @@ ask.addEventListener('keyup', function (e) {
 	}
 });
 
-
+//functions
 function limit() {
 	if (ask.value.length > 3) {
 		let sliced = ask.value.slice(0, 3);

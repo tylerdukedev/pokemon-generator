@@ -12,3 +12,20 @@ body {
 h1 {
     display: flex;
 }
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#input {
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#btn {
+    font-size: 34px;
+}
