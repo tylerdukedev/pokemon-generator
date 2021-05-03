@@ -1,13 +1,13 @@
 let con = document.querySelector('#container');
-function generate() {
+	let ask = document.querySelector('#input');
+	ask.addEventListener('keyup', function (e) {
+		e.preventDefault();
+		if (e.key === 'Enter') {
+			document.querySelector('#btn').click();
+		}
+	});
 
-	let ask = document.querySelector('#input')
-    addEventListener("keyup", function(event){
-        event.preventDefault();
-        if (event.keyCode === 13){
-            document.querySelector('#btn').click();
-        }
-    });
+function generate() {
 
 	if (ask.value > 1 && ask.value < 152) {
 		con.innerHTML = '';
