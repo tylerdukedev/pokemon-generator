@@ -1,11 +1,11 @@
 let con = document.querySelector('#container');
-	let ask = document.querySelector('#input');
-	ask.addEventListener('keyup', function (e) {
-		e.preventDefault();
-		if (e.key === 'Enter') {
-			document.querySelector('#btn').click();
-		}
-	});
+let ask = document.querySelector('#input');
+ask.addEventListener('keyup', function (e) {
+	e.preventDefault();
+	if (e.key === 'Enter') {
+		document.querySelector('#btn').click();
+	}
+});
 
 function generate() {
 
