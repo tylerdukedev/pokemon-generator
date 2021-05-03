@@ -7,6 +7,14 @@ ask.addEventListener('keyup', function (e) {
 	}
 });
 
+function preventNonNumericalInput(e) {
+	e = e || window.event;
+	var charCode = typeof e.which == 'undefined' ? e.keyCode : e.which;
+	var charStr = String.fromCharCode(charCode);
+
+	if (!charStr.match(/^[0-9]+$/)) e.preventDefault();
+};
+
 function generate() {
 
 	if (ask.value > 0 && ask.value < 152) {
@@ -23,7 +31,7 @@ function generate() {
 		con.innerHTML = '';
 		con.appendChild('no');
 	}
-}
+};
 
 // for (i = 0; i < 7; i++){
 //     let pokeball = document.createElement('img');
