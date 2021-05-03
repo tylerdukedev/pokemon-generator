@@ -1,12 +1,16 @@
 let con = document.querySelector('#container');
 let ask = document.querySelector('#input');
+
+window.onload = () => {
+	ask.onpaste = (e) => e.preventDefault();
+};
+
 ask.addEventListener('keyup', function (e) {
 	e.preventDefault();
 	if (e.key === 'Enter') {
 		document.querySelector('#btn').click();
 	}
 });
-
 function preventNonNumericalInput(e) {
 	e = e || window.event;
 	var charCode = typeof e.which == 'undefined' ? e.keyCode : e.which;
