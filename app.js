@@ -11,6 +11,14 @@ ask.addEventListener('keyup', function (e) {
 		document.querySelector('#btn').click();
 	}
 });
+
+function limit(){
+	if (ask.value.length > 3){
+		let sliced = ask.value.slice(0,2);
+		ask.value = sliced;
+	}
+}
+
 function preventNonNumericalInput(e) {
 	e = e || window.event;
 	var charCode = typeof e.which == 'undefined' ? e.keyCode : e.which;
@@ -20,25 +28,19 @@ function preventNonNumericalInput(e) {
 };
 
 function generate() {
-
-	if (ask.value > 0 && ask.value < 152) {
+	let value = ask.value;
+	
+	if (value > 0 && value < 152 && value) {
 		con.innerHTML = '';
-		for (i = 0; i < ask.value; i++) {
+		for (i = 0; i < value; i++) {
 			let pokeball = document.createElement('img');
 			pokeball.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${Math.floor(
 				Math.random() * 152
 			)}.png`;
 			con.append(pokeball);
-			console.log(`${ask.value}`);
+			console.log(`${value}`);
 		}
-	} else if (ask.value > 152 || ask.value < 0) {
+	} else if (value > 152 || value < 0) {
 		con.innerHTML = '';
-		con.appendChild('no');
 	}
 };
-
-// for (i = 0; i < 7; i++){
-//     let pokeball = document.createElement('img');
-//     pokeball.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${Math.floor(Math.random() * 152)}.png`;
-//     con.appendChild(pokeball);
-// }
