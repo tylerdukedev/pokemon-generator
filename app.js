@@ -18,7 +18,7 @@ function limit() {
 		let sliced = ask.value.slice(0, 3);
 		ask.value = sliced;
 	}
-}
+};
 
 function preventNonNumericalInput(e) {
 	e = e || window.event;
