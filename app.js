@@ -1,6 +1,14 @@
 let con = document.querySelector('#container');
 function generate() {
-	let ask = document.querySelector('#input');
+
+	let ask = document.querySelector('#input')
+    addEventListener("keyup", function(event){
+        event.preventDefault();
+        if (event.keyCode === 13){
+            document.querySelector('#btn').click();
+        }
+    });
+
 	if (ask.value > 1 && ask.value < 152) {
 		con.innerHTML = '';
 		for (i = 0; i < ask.value; i++) {
