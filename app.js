@@ -9,7 +9,7 @@ ask.addEventListener('keyup', function (e) {
 
 function generate() {
 
-	if (ask.value > 1 && ask.value < 152) {
+	if (ask.value > 0 && ask.value < 152) {
 		con.innerHTML = '';
 		for (i = 0; i < ask.value; i++) {
 			let pokeball = document.createElement('img');
