@@ -1,7 +1,6 @@
 
 
 let con = document.querySelector('#container');
-const pokemon = 
 function generate(){
     let ask = document.querySelector('#input');
     if (ask.value > 0 && ask.value < 152){
@@ -20,7 +19,6 @@ function generate(){
     }
 }
 
-generate();
 
 
 // for (i = 0; i < 7; i++){
