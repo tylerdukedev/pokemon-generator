@@ -18,6 +18,9 @@ function limit() {
 		let sliced = ask.value.slice(0, 3);
 		ask.value = sliced;
 	}
+	if (ask.value > 151 || ask.value < 1){
+		ask.value = '';
+	}
 };
 
 function preventNonNumericalInput(e) {
