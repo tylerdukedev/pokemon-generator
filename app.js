@@ -12,12 +12,12 @@ ask.addEventListener('keyup', function (e) {
 	}
 });
 
-function limit(){
-	if (ask.value.length >= 3){
-		let sliced = ask.value.slice(0,2);
+function limit() {
+	if (ask.value.length > 3) {
+		let sliced = ask.value.slice(0, 3);
 		ask.value = sliced;
 	}
-} 
+}
 
 function preventNonNumericalInput(e) {
 	e = e || window.event;
