@@ -10,6 +10,7 @@ Started out as a simple Udemy project meant to generate all 151 pokemon sprites 
 -- Learned how to call functions more efficiently using HTML attributes
 -- Further polished my ability to write and implement functions
 -- Learned how to implement keyboard functions (Such as the backspace and enter key)
+-- How to use Git! This is an ongoing process for me as I only wish to host projects I believe are worth something to others. I got *a lot* of Git experience during this which makes me super happy!
 
 # challenges
 <h3>limit()</h3>
